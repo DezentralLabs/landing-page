@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Dezentral Labs</title>
+
+    <meta name="msapplication-TileColor" content="#5c73ce" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <meta name="description" content="Decentralized Software Solutions" />
+    <meta
+      name="keywords"
+      content="decentralized, web3, ethereum, bitcoin, blockchain, software, consulting, development, distributed, peer-to-peer"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dezentral_labs" />
+    <meta
+      name="twitter:title"
+      content="Dezentral Labs - Decentralized Software Solutions"
+    />
+    <meta
+      name="twitter:description"
+      content="Decentralized Software Solutions"
+    />
+    <meta
+      name="twitter:img:src"
+      content="https://dezentrallabs.com/social-card.png"
+    />
+    <meta
+      name="og:title"
+      content="Dezentral Labs - Decentralized Software Solutions"
+    />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://dezentrallabs.com" />
+    <meta name="og:image" content="https://dezentrallabs.com/social-card.png" />
+    <meta name="og:description" content="Decentralized Software Solutions" />
+    <meta
+      name="og:site_name"
+      content="Dezentral Labs - Decentralized Software Solutions"
+    />
+    <meta name="fb:admins" content="196724774547914" />
+
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+  </head>
+  <body>
+    <div id="banner">
+      <img src="./logo.png" alt="logo" />
+      <h1>Dezentral Labs</h1>
+      <p>Decentralized Software Solutions</p>
+    </div>
+    <div id="particles-js"></div>
+    <script src="js/particles.js"></script>
+    <script src="js/config.js"></script>
+    <script>
+      var count_particles, stats, update;
+      stats = new Stats();
+      stats.setMode(0);
+      stats.domElement.style.position = "absolute";
+      stats.domElement.style.left = "0px";
+      stats.domElement.style.top = "0px";
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector(".js-count-particles");
+      update = function() {
+        stats.begin();
+        stats.end();
+        if (
+          window.pJSDom[0].pJS.particles &&
+          window.pJSDom[0].pJS.particles.array
+        ) {
+          count_particles.innerText =
+            window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    </script>
+  </body>
+</html>
